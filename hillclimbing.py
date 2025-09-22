@@ -119,6 +119,7 @@ if __name__ == "__main__":
     import sys
     import knapsack
     import random
+    import pandas as pd
 
     # Configuração do problema knapsack
     DIM = 20
@@ -154,5 +155,7 @@ if __name__ == "__main__":
             file.write(f"{valor}\n")
     
     media_solucao = calculo_solucao/30
+    desvio_padrao = pd.Series(historico)
 
     print(f'Média: {media_solucao}')
+    print(f'Desvio Padrão : {desvio_padrao}')
